@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iglesia Cristo Rompe Las Cadenas</title>
+  <style>
+    :root {
+      --navy: #071a33;
+      --blue: #123d79;
+      --gold: #d7aa35;
+      --white: #ffffff;
+      --soft: #f5f7fb;
+      --text: #1c2534;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(7, 26, 51, 0.96);
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,.18);
+    }
+    .brand { font-weight: 800; letter-spacing: .5px; font-size: 18px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 22px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .hero {
+      min-height: 92vh;
+      background:
+        linear-gradient(90deg, rgba(7,26,51,.92), rgba(7,26,51,.55)),
+        url("assets/IMG_1053.jpeg") center/cover no-repeat;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 80px 7%;
+    }
+    .hero-content { max-width: 790px; }
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      line-height: .98;
+      margin: 0 0 22px;
+      font-weight: 900;
+    }
+    .hero p { font-size: 21px; max-width: 680px; }
+    .english {
+      opacity: .9;
+      font-size: 16px;
+      border-left: 4px solid var(--gold);
+      padding-left: 14px;
+      margin-top: 14px;
+    }
+    .buttons { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+    .btn.gold { background: var(--gold); color: var(--navy); }
+    .btn.outline { border: 2px solid white; color: white; }
+    section { padding: 82px 7%; }
+    .section-title {
+      font-size: clamp(32px, 4vw, 54px);
+      margin: 0 0 18px;
+      color: var(--navy);
+      line-height: 1.05;
+    }
+    .lead { font-size: 20px; max-width: 850px; margin-bottom: 34px; }
+    .small-en { color: #526070; font-size: 16px; margin-top: -20px; margin-bottom: 30px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 22px;
+    }
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 16px 50px rgba(0,0,0,.08);
+      border: 1px solid #e7ecf4;
+    }
+    .card h3 { margin-top: 0; color: var(--blue); font-size: 24px; }
+    .soft { background: var(--soft); }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+      align-items: center;
+    }
+    .split img, .gallery img {
+      width: 100%;
+      border-radius: 26px;
+      box-shadow: 0 20px 55px rgba(0,0,0,.14);
+      object-fit: cover;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .gallery img { height: 310px; }
+    .belief-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .belief {
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      border-left: 5px solid var(--gold);
+      box-shadow: 0 12px 35px rgba(0,0,0,.06);
+      font-weight: 700;
+    }
+    .cta {
+      background: linear-gradient(135deg, var(--navy), var(--blue));
+      color: white;
+      text-align: center;
+      border-radius: 34px;
+      padding: 60px 24px;
+    }
+    .cta h2 { font-size: clamp(32px, 5vw, 58px); margin: 0 0 12px; }
+    .cta p { font-size: 20px; margin-bottom: 28px; }
+    footer {
+      background: var(--navy);
+      color: white;
+      padding: 34px 7%;
+      text-align: center;
+    }
+    @media (max-width: 800px) {
+      header { display: block; }
+      nav { margin-top: 10px; }
+      nav a { margin-left: 0; margin-right: 12px; display: inline-block; }
+      .split { grid-template-columns: 1fr; }
+      .hero { min-height: 80vh; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Iglesia Cristo Rompe Las Cadenas</div>
+    <nav>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Fe • Libertad • Restauración</div>
+        <h1>Cristo Rompe Las Cadenas</h1>
+        <p>Una iglesia pentecostal en Irving, Texas, donde adoramos a Dios, predicamos Su Palabra y creemos en el poder de Jesucristo para transformar vidas.</p>
+        <p class="english">A Pentecostal church in Irving, Texas where we worship God, preach His Word, and believe in the power of Jesus Christ to transform lives.</p>
+        <div class="buttons">
+          <a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=1132+W+Pioneer+Dr,+Irving,+TX+75061">Cómo Llegar</a>
+          <a class="btn outline" href="tel:9726075890">Llamar Ahora</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicios" class="soft">
+      <h2 class="section-title">Acompáñanos Esta Semana</h2>
+      <p class="lead">Eres bienvenido. Ven con tu familia a adorar, orar y recibir una palabra de Dios.</p>
+      <p class="small-en">You are welcome. Come with your family to worship, pray, and receive a word from God.</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Servicio Dominical</h3>
+          <p><strong>Domingos 11:00 AM</strong></p>
+          <p>Adoración, predicación, oración y comunión.</p>
+          <p><em>Sunday Service — 11:00 AM</em></p>
+        </div>
+        <div class="card">
+          <h3>Servicio Entre Semana</h3>
+          <p><strong>Miércoles 7:30 PM</strong></p>
+          <p>Un tiempo de oración, enseñanza y fortalecimiento espiritual.</p>
+          <p><em>Wednesday Service — 7:30 PM</em></p>
+        </div>
+        <div class="card">
+          <h3>Ubicación</h3>
+          <p><strong>1132 W Pioneer Dr</strong><br>Irving, TX 75061</p>
+          <p><strong>(972) 607-5890</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <div class="split">
+        <div>
+          <h2 class="section-title">Una Familia de Fe</h2>
+          <p class="lead">Iglesia Cristo Rompe Las Cadenas es una iglesia pentecostal apasionada por la presencia de Dios, la oración, la adoración y la restauración de las familias.</p>
+          <p>Creemos que Jesucristo salva, sana, restaura y rompe toda cadena. Nuestra misión es predicar el Evangelio, levantar el nombre de Jesús y servir a nuestra comunidad con amor.</p>
+          <p class="small-en">We believe Jesus Christ saves, heals, restores, and breaks every chain.</p>
+        </div>
+        <img src="assets/FullSizeRender.jpeg" alt="Familia de la iglesia">
+      </div>
+    </section>
+
+    <section class="soft">
+      <h2 class="section-title">Lo Que Creemos</h2>
+      <p class="lead">Somos una iglesia cristiana pentecostal que cree en el poder de Dios para cambiar vidas.</p>
+      <div class="belief-list">
+        <div class="belief">Jesucristo es Señor</div>
+        <div class="belief">La Biblia es la Palabra de Dios</div>
+        <div class="belief">El Espíritu Santo sigue obrando</div>
+        <div class="belief">La oración tiene poder</div>
+        <div class="belief">Dios restaura familias</div>
+        <div class="belief">En Cristo hay libertad</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="split">
+        <img src="assets/IMG_6535.jpeg" alt="Adoración en la iglesia">
+        <div>
+          <h2 class="section-title">Adoración Con Pasión</h2>
+          <p class="lead">Cada servicio es una oportunidad para buscar la presencia de Dios con adoración, oración y una palabra viva.</p>
+          <p class="small-en">Every service is an opportunity to seek the presence of God through worship, prayer, and the Word.</p>
+          <div class="cards">
+            <div class="card"><h3>Adoración</h3><p>Música en vivo y alabanza con todo el corazón.</p></div>
+            <div class="card"><h3>Oración</h3><p>Creemos por sanidad, libertad y restauración.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="soft">
+      <h2 class="section-title">Galería</h2>
+      <p class="lead">Momentos de nuestra iglesia, adoración, familia y servicios.</p>
+      <div class="gallery">
+        <img src="assets/IMG_1050.jpeg" alt="Exterior de la iglesia">
+        <img src="assets/IMG_1052.jpeg" alt="Equipo de adoración">
+        <img src="assets/IMG_6534.jpeg" alt="Servicio de iglesia">
+        <img src="assets/IMG_6311.jpeg" alt="Entrada de la iglesia">
+        <img src="assets/IMG_6309.jpeg" alt="Rótulo de la iglesia">
+        <img src="assets/IMG_0403.jpeg" alt="Pastor predicando">
+      </div>
+    </section>
+
+    <section id="visitanos">
+      <div class="cta">
+        <h2>Planifica Tu Visita</h2>
+        <p>Nos encantaría recibirte a ti y a tu familia este domingo.</p>
+        <p><strong>Domingos 11:00 AM • Miércoles 7:30 PM</strong></p>
+        <div class="buttons" style="justify-content:center;">
+          <a class="btn gold" href="https://www.google.com/maps/search/?api=1&query=1132+W+Pioneer+Dr,+Irving,+TX+75061">Cómo Llegar</a>
+          <a class="btn outline" href="tel:9726075890">Llamar (972) 607-5890</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Iglesia Cristo Rompe Las Cadenas</strong></p>
+    <p>1132 W Pioneer Dr, Irving, TX 75061</p>
+    <p>Domingos 11:00 AM • Miércoles 7:30 PM • (972) 607-5890</p>
+    <p>© Iglesia Cristo Rompe Las Cadenas</p>
+  </footer>
+</body>
+</html>
